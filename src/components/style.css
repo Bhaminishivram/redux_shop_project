@@ -1,0 +1,26 @@
+.title{
+    padding: 100;
+    margin: 10;
+    color:turquoise; 
+    border-bottom: 2px soild tomato;
+    text-align: center;
+  
+  } 
+  .item{
+    padding: 10px;
+    margin:10px;
+    background:red;
+    color:yellow; 
+    border:2px soild greenyellow; 
+    width: 350px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  } 
+  .items{
+      text-align: center;
+      display: flex; 
+      justify-content: center;
+  }

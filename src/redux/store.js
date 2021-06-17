@@ -1,0 +1,15 @@
+import { createStore,combineReducers ,applyMiddleware,compose} from "redux";
+import laptopReducers from "./reducers/laptopReducers";
+import mobileReducers from "./reducers/mobileReducer"; 
+import usersReducer from "./reducers/usersReducer"; 
+import thunk from "redux-thunk"; 
+import logger from 'redux-logger';
+
+const rootReducer = combineReducers({
+    laptops:laptopReducers,
+    mobiles:mobileReducers, 
+    users:usersReducer
+})
+const store = createStore(rootReducer,compose(applyMiddleware(thunk,logger),
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(), ));
+export default store; 
